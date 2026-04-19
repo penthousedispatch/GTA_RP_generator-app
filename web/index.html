@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORGE NYC Modular GTA RP Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>FORGE NYC Modular GTA RP Builder</h1>
+      <p>Stream-safe borough + prison + airport + plane module orchestration</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>World Profile</h2>
+        <ul>
+          <li><strong>Region:</strong> Queens</li>
+          <li><strong>Environment:</strong> Airport Terminal Interior</li>
+          <li><strong>Module Class:</strong> Interior</li>
+          <li><strong>Stream Group:</strong> airport_terminal_A</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Map Topology</h2>
+        <p>Main Exterior + Special Exteriors + Interior Modules</p>
+        <div class="chips">
+          <span>Brooklyn Main</span>
+          <span>Queens Corridor</span>
+          <span>Prison Exterior</span>
+          <span>Airport Exterior</span>
+          <span>Plane Interior</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Transition Nodes</h2>
+        <ol>
+          <li>terminal_entry_A → airport_terminal_interior_A</li>
+          <li>security_gate_B → airport_gate_waiting_area_A</li>
+          <li>jetbridge_A → plane_interior_commercial_A</li>
+        </ol>
+      </section>
+
+      <section class="card accent">
+        <h2>Exporter</h2>
+        <p>airport_terminal_interior_scene.fbx</p>
+        <button>Generate Pack</button>
+      </section>
+    </main>
+  </body>
+</html>
