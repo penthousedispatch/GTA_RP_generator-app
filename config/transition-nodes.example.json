@@ -1,0 +1,44 @@
+[
+  {
+    "node_id": "prison_gate_exterior",
+    "from_module": "prison_exterior_max_A",
+    "to_module": "prison_booking_interior_A",
+    "transition_type": "doorway",
+    "stream_action": "load_target_module"
+  },
+  {
+    "node_id": "prison_corridor_A",
+    "from_module": "prison_booking_interior_A",
+    "to_module": "prison_cellblock_A",
+    "transition_type": "security_gate",
+    "stream_action": "load_target_module"
+  },
+  {
+    "node_id": "terminal_entry_A",
+    "from_module": "airport_exterior_terminal_A",
+    "to_module": "airport_terminal_interior_A",
+    "transition_type": "doorway",
+    "stream_action": "load_target_module"
+  },
+  {
+    "node_id": "security_gate_B",
+    "from_module": "airport_terminal_interior_A",
+    "to_module": "airport_gate_waiting_area_A",
+    "transition_type": "checkpoint",
+    "stream_action": "load_target_module"
+  },
+  {
+    "node_id": "jetbridge_A",
+    "from_module": "airport_terminal_interior_A",
+    "to_module": "plane_interior_commercial_A",
+    "transition_type": "doorway",
+    "stream_action": "load_target_module"
+  },
+  {
+    "node_id": "cockpit_door",
+    "from_module": "plane_interior_commercial_A",
+    "to_module": "cockpit_interior_A",
+    "transition_type": "doorway",
+    "stream_action": "load_target_module"
+  }
+]

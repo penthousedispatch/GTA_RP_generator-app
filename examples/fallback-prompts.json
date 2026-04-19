@@ -1,0 +1,63 @@
+{
+  "fallback_prompts": [
+    "Brooklyn mixed urban block",
+    "Queens airport corridor",
+    "Bronx apartment zone",
+    "Long Island suburban commercial strip",
+    "prison exterior maximum security",
+    "prison cellblock interior",
+    "prison booking interior",
+    "airport terminal interior",
+    "airport baggage claim",
+    "commercial plane interior",
+    "private jet interior",
+    "cargo plane interior"
+  ],
+  "fallback_examples": [
+    {
+      "name": "queens_airport_corridor_fallback",
+      "region_preset": "queens",
+      "environment_type": "airport_exterior_terminal",
+      "interior": false,
+      "security_level": "high",
+      "density_level": "medium",
+      "grime_level": "low",
+      "transit_intensity": "high",
+      "building_style": "commercial_modern_ny",
+      "landmark_style": "jfk_inspired",
+      "module_class": "special_exterior",
+      "stream_group": "queens_airport_exterior",
+      "transition_nodes": ["terminal_entry_A", "runway_service_gate_01"]
+    },
+    {
+      "name": "prison_cellblock_fallback",
+      "region_preset": "long_island",
+      "environment_type": "prison_interior_cellblock",
+      "interior": true,
+      "security_level": "maximum",
+      "density_level": "medium",
+      "grime_level": "worn",
+      "transit_intensity": "low",
+      "building_style": "institutional_concrete",
+      "landmark_style": "state_corrections",
+      "module_class": "interior",
+      "stream_group": "prison_cellblock_A",
+      "transition_nodes": ["prison_corridor_A", "prison_yard_exit"]
+    },
+    {
+      "name": "commercial_plane_interior_fallback",
+      "region_preset": "queens",
+      "environment_type": "plane_interior_commercial",
+      "interior": true,
+      "security_level": "high",
+      "density_level": "high",
+      "grime_level": "clean",
+      "transit_intensity": "high",
+      "building_style": "commercial_airliner",
+      "landmark_style": "domestic_flight",
+      "module_class": "vehicle_interior",
+      "stream_group": "plane_commercial_A",
+      "transition_nodes": ["plane_door_front", "cockpit_door"]
+    }
+  ]
+}

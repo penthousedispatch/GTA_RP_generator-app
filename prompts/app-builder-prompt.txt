@@ -1,0 +1,73 @@
+Update the FORGE system so it supports a modular New York GTA RP ecosystem built around Long Island and the 5 boroughs, plus specialized environments for prisons, airports, planes, and their interiors.
+
+Add support for these region presets:
+• manhattan
+• brooklyn
+• queens
+• bronx
+• staten_island
+• long_island
+• nassau
+• suffolk
+
+Add support for these environment types:
+• prison_exterior_minimum
+• prison_exterior_maximum
+• prison_interior_cellblock
+• prison_interior_booking
+• prison_interior_visitation
+• airport_exterior_terminal
+• airport_exterior_runway
+• airport_exterior_hangar
+• airport_terminal_interior
+• airport_security_checkpoint
+• airport_baggage_claim
+• plane_interior_commercial
+• plane_interior_private_jet
+• plane_interior_cargo
+• cockpit_interior
+
+Add required world config fields:
+• region_preset
+• environment_type
+• interior
+• security_level
+• density_level
+• grime_level
+• transit_intensity
+• building_style
+• landmark_style
+• module_class
+• stream_group
+• transition_nodes
+
+Update asset tagging to support:
+• borough / Long Island tags
+• prison tags
+• airport tags
+• plane tags
+• interior / exterior tags
+• security / institutional / transport tags
+
+Update fallback generation so it can produce:
+• Brooklyn mixed urban block
+• Queens airport corridor
+• Long Island suburban commercial strip
+• prison exterior maximum security
+• prison cellblock interior
+• prison booking area
+• airport terminal interior
+• airport baggage claim
+• commercial plane interior
+• private jet interior
+• cargo plane interior
+
+Design the GTA RP map as a modular system, not one oversized world.
+Use:
+• a main exterior world with borough and Long Island zones
+• special exterior modules for prison and airport
+• separate interior modules for prison interiors, airport interiors, and plane interiors
+• transition nodes to connect them
+• stream groups to organize exports and loading
+
+Optimize the system for GTA RP-style modular maps, reusable interiors, New York-inspired environment packs, and cinematic video scenes.

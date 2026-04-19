@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forge.local/schemas/world-config.schema.json",
+  "title": "FORGE Modular GTA RP World Config",
+  "type": "object",
+  "required": [
+    "name",
+    "region_preset",
+    "environment_type",
+    "interior",
+    "security_level",
+    "density_level",
+    "grime_level",
+    "transit_intensity",
+    "building_style",
+    "landmark_style",
+    "module_class",
+    "stream_group",
+    "transition_nodes"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "region_preset": {
+      "type": "string",
+      "enum": [
+        "manhattan",
+        "brooklyn",
+        "queens",
+        "bronx",
+        "staten_island",
+        "long_island",
+        "nassau",
+        "suffolk"
+      ]
+    },
+    "environment_type": {
+      "type": "string",
+      "enum": [
+        "manhattan_dense_core",
+        "brooklyn_mixed_urban_blocks",
+        "queens_corridor_transit_belt",
+        "bronx_residential_urban",
+        "staten_island_suburban_edge",
+        "long_island_suburban_commercial",
+        "long_island_industrial_strip",
+        "nassau_medical_corridor",
+        "prison_exterior_minimum",
+        "prison_exterior_maximum",
+        "prison_interior_cellblock",
+        "prison_interior_booking",
+        "prison_interior_visitation",
+        "prison_interior_cafeteria",
+        "prison_interior_control_room",
+        "prison_yard_module",
+        "airport_exterior_terminal",
+        "airport_exterior_runway",
+        "airport_exterior_hangar",
+        "airport_terminal_interior",
+        "airport_security_checkpoint",
+        "airport_baggage_claim",
+        "airport_gate_waiting_area",
+        "airport_service_corridor",
+        "airport_retail_interior",
+        "plane_exterior_commercial",
+        "plane_exterior_private_jet",
+        "plane_exterior_cargo",
+        "plane_interior_commercial",
+        "plane_interior_private_jet",
+        "plane_interior_cargo",
+        "cockpit_interior",
+        "service_vehicle_loading_zone"
+      ]
+    },
+    "interior": {
+      "type": "boolean"
+    },
+    "security_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "maximum"]
+    },
+    "density_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "grime_level": {
+      "type": "string",
+      "enum": ["clean", "low", "medium", "high", "worn", "dirty"]
+    },
+    "transit_intensity": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "building_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "landmark_style": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module_class": {
+      "type": "string",
+      "enum": ["main_exterior", "special_exterior", "interior", "vehicle_interior"]
+    },
+    "stream_group": {
+      "type": "string",
+      "minLength": 1
+    },
+    "transition_nodes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "asset_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Multi-tag support for region, environment, structural, and condition tags."
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "interior": { "const": true } }
+      },
+      "then": {
+        "properties": {
+          "module_class": {
+            "enum": ["interior", "vehicle_interior"]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "module_class": {
+            "enum": ["main_exterior", "special_exterior"]
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

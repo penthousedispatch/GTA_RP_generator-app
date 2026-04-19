@@ -1,0 +1,18 @@
+[
+  {"stream_group": "brooklyn_main", "class": "main_exterior"},
+  {"stream_group": "queens_corridor_main", "class": "main_exterior"},
+  {"stream_group": "bronx_main", "class": "main_exterior"},
+  {"stream_group": "long_island_main", "class": "main_exterior"},
+  {"stream_group": "industrial_waterfront_main", "class": "main_exterior"},
+  {"stream_group": "queens_airport_exterior", "class": "special_exterior"},
+  {"stream_group": "prison_exterior_max", "class": "special_exterior"},
+  {"stream_group": "prison_cellblock_A", "class": "interior"},
+  {"stream_group": "prison_booking_A", "class": "interior"},
+  {"stream_group": "airport_terminal_A", "class": "interior"},
+  {"stream_group": "airport_security_A", "class": "interior"},
+  {"stream_group": "airport_baggage_A", "class": "interior"},
+  {"stream_group": "plane_commercial_A", "class": "vehicle_interior"},
+  {"stream_group": "plane_private_jet_A", "class": "vehicle_interior"},
+  {"stream_group": "plane_cargo_A", "class": "vehicle_interior"},
+  {"stream_group": "cockpit_A", "class": "vehicle_interior"}
+]
