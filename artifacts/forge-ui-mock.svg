@@ -1,0 +1,39 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e1117"/>
+      <stop offset="100%" stop-color="#1c2940"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1400" height="120" fill="#111827"/>
+  <line x1="0" y1="120" x2="1400" y2="120" stroke="#30363d"/>
+
+  <text x="32" y="48" fill="#e6edf3" font-size="30" font-family="Arial">FORGE NYC Modular GTA RP Builder</text>
+  <text x="32" y="82" fill="#9aa4b2" font-size="20" font-family="Arial">Stream-safe borough + prison + airport + plane module orchestration</text>
+
+  <rect x="30" y="160" rx="14" ry="14" width="650" height="230" fill="#1a2029" stroke="#30363d"/>
+  <text x="54" y="198" fill="#e6edf3" font-size="28" font-family="Arial">World Profile</text>
+  <text x="54" y="236" fill="#c8d1dc" font-size="21" font-family="Arial">• Region: Queens</text>
+  <text x="54" y="266" fill="#c8d1dc" font-size="21" font-family="Arial">• Environment: Airport Terminal Interior</text>
+  <text x="54" y="296" fill="#c8d1dc" font-size="21" font-family="Arial">• Module Class: Interior</text>
+  <text x="54" y="326" fill="#c8d1dc" font-size="21" font-family="Arial">• Stream Group: airport_terminal_A</text>
+
+  <rect x="720" y="160" rx="14" ry="14" width="650" height="230" fill="#1a2029" stroke="#30363d"/>
+  <text x="744" y="198" fill="#e6edf3" font-size="28" font-family="Arial">Map Topology</text>
+  <text x="744" y="236" fill="#c8d1dc" font-size="21" font-family="Arial">Main Exterior + Special Exteriors + Interior Modules</text>
+  <text x="744" y="280" fill="#bfd6ff" font-size="19" font-family="Arial">Brooklyn | Queens Corridor | Prison Exterior</text>
+  <text x="744" y="310" fill="#bfd6ff" font-size="19" font-family="Arial">Airport Exterior | Plane Interior</text>
+
+  <rect x="30" y="420" rx="14" ry="14" width="650" height="250" fill="#1a2029" stroke="#30363d"/>
+  <text x="54" y="460" fill="#e6edf3" font-size="28" font-family="Arial">Transition Nodes</text>
+  <text x="54" y="500" fill="#c8d1dc" font-size="21" font-family="Arial">1) terminal_entry_A → airport_terminal_interior_A</text>
+  <text x="54" y="532" fill="#c8d1dc" font-size="21" font-family="Arial">2) security_gate_B → airport_gate_waiting_area_A</text>
+  <text x="54" y="564" fill="#c8d1dc" font-size="21" font-family="Arial">3) jetbridge_A → plane_interior_commercial_A</text>
+
+  <rect x="720" y="420" rx="14" ry="14" width="650" height="250" fill="#1a2029" stroke="#3d8bff" stroke-width="2"/>
+  <text x="744" y="460" fill="#e6edf3" font-size="28" font-family="Arial">Exporter</text>
+  <text x="744" y="504" fill="#c8d1dc" font-size="24" font-family="Arial">airport_terminal_interior_scene.fbx</text>
+  <rect x="744" y="540" width="260" height="52" rx="10" ry="10" fill="#4fa3ff"/>
+  <text x="786" y="573" fill="#00122e" font-size="24" font-family="Arial" font-weight="bold">Generate Pack</text>
+</svg>

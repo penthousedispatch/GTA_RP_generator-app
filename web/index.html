@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORGE NYC Modular GTA RP Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>FORGE NYC Modular GTA RP Builder</h1>
+      <p>Build stream-safe NYC / Long Island modules for GTA RP with prison, airport, and plane support.</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Module Config Builder</h2>
+        <form id="configForm" class="form-grid">
+          <label>Module Name<input name="name" value="queens_airport_terminal_A" required /></label>
+
+          <label>Region Preset
+            <select name="region_preset" id="region"></select>
+          </label>
+
+          <label>Environment Type
+            <select name="environment_type" id="environment"></select>
+          </label>
+
+          <label>Interior
+            <select name="interior" id="interior">
+              <option value="false">false</option>
+              <option value="true">true</option>
+            </select>
+          </label>
+
+          <label>Module Class
+            <select name="module_class" id="moduleClass"></select>
+          </label>
+
+          <label>Security Level
+            <select name="security_level" id="security">
+              <option>low</option><option>medium</option><option selected>high</option><option>maximum</option>
+            </select>
+          </label>
+
+          <label>Density Level
+            <select name="density_level" id="density">
+              <option>low</option><option selected>medium</option><option>high</option>
+            </select>
+          </label>
+
+          <label>Grime Level
+            <select name="grime_level" id="grime">
+              <option>clean</option><option selected>low</option><option>medium</option><option>high</option><option>worn</option><option>dirty</option>
+            </select>
+          </label>
+
+          <label>Transit Intensity
+            <select name="transit_intensity" id="transit">
+              <option>low</option><option>medium</option><option selected>high</option>
+            </select>
+          </label>
+
+          <label>Building Style<input name="building_style" value="commercial_modern_ny" /></label>
+          <label>Landmark Style<input name="landmark_style" value="jfk_inspired" /></label>
+          <label>Stream Group<input name="stream_group" value="airport_terminal_A" /></label>
+        </form>
+
+        <div class="transitions">
+          <h3>Transition Nodes</h3>
+          <div class="row">
+            <input id="transitionInput" placeholder="e.g. jetbridge_A" />
+            <button id="addTransition" type="button">Add</button>
+          </div>
+          <ul id="transitionList"></ul>
+        </div>
+
+        <div class="actions">
+          <button id="generateBtn" type="button">Generate JSON</button>
+          <button id="downloadBtn" type="button">Download JSON</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Output</h2>
+        <pre id="jsonOutput"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>Suggested Fallback Prompts</h2>
+        <div id="promptChips" class="chips"></div>
+
+        <h3>Export Name Suggestion</h3>
+        <p id="exportName" class="export">airport_terminal_interior_scene.fbx</p>
+
+        <h3>Stream Group Guidance</h3>
+        <ul class="bullets">
+          <li>main_exterior: borough / Long Island zones</li>
+          <li>special_exterior: prison + airport exteriors</li>
+          <li>interior: prison + airport MLO modules</li>
+          <li>vehicle_interior: plane + cockpit modules</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
