@@ -12,6 +12,6 @@ This repository contains the updated FORGE bundle configuration assets for a mod
 - `docs/export-naming.md`: Export naming patterns for FiveM, Unreal, video, and pack outputs.
 - `docs/modular-layout.md`: Recommended main exterior and interior module layout strategy.
 - `prompts/app-builder-prompt.txt`: Exact integration prompt for the app builder.
-- `web/index.html` + `web/styles.css`: Static UI preview of the FORGE dashboard.
-- `docs/ui-preview.md`: UI preview doc with image reference.
-- `artifacts/forge-ui-mock.svg`: Visual mock showing how the app interface looks.
+- `web/index.html` + `web/styles.css` + `web/app.js`: Interactive static UI preview for module config authoring.
+- `docs/ui-preview.md`: UI preview doc and feature summary.
+- `artifacts/forge-ui-mock.svg`: Visual mock showing the app interface direction.

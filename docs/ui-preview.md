@@ -1,19 +1,21 @@
-# FORGE UI Preview (Mock)
+# FORGE UI Preview (Interactive Static App)
 
-This repository previously had no runnable web UI. To answer "how the app looks," this mock screen shows the intended dashboard layout for the modular NYC bundle.
+The repository now includes a browser-based static app preview for building module configs.
 
-## Included mock components
+## Features
 
-- Header with FORGE NYC module context
-- World Profile panel
-- Map Topology panel
-- Transition Nodes panel
-- Exporter panel
+- Region + environment selector for NYC, Long Island, prison, airport, and plane targets
+- Conditional `module_class` options based on `interior` flag
+- Transition-node list editor (add/remove)
+- Live JSON output generation
+- JSON download button for generated module configs
+- Fallback prompt chips for quick generator-target references
+- Export filename suggestion driven by environment type
 
-Preview image:
-
-![FORGE UI mock preview](../artifacts/forge-ui-mock.svg)
-
-## Run locally (static preview)
+## Run locally
 
 Open `web/index.html` in a browser.
+
+## Visual mock
+
+![FORGE UI mock preview](../artifacts/forge-ui-mock.svg)
